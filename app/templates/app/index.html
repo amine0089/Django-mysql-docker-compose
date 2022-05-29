@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sfizer</title>
+</head>
+<body>
+	<h1>hello {% if user.is_authenticated %} <span style="color:red">mr.{{user.username}}</span>{% else %} __ {% endif %} to sfizer</h1>
+
+	{% if user.is_authenticated %}
+		<h1>You are logged in </h1>
+	{% else %}
+		<form method="POST">
+			{% csrf_token %}
+			{{form}}
+		<button type="submit">Register</button>
+
+	</form>
+	{% endif %}
+	
+</body>
+</html>
