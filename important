@@ -1,0 +1,8 @@
+1-first command after pulling the project,Remove the folder named db and after that run the command:
+
+     -docker-compose up -d --build
+
+2-to migrate the new MySql database running in Docker execute the following command:
+
+     -docker-compose exec web python manage.py migrate
+     
